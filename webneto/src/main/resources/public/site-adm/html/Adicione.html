@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/estilo.css">
+  <title>LowCost</title>
+  <script>
+    checkLogged = function() {
+      let user = localStorage.getItem('sistema:userInfo');
+      if (!user) {
+        alert('Faça login primeiro');
+        window.location = 'Perfil.html'
+        return;
+      }
+    }
+    checkLogged();
+    addService = function () {
+      let formData = new FormData(document.querySelector("form"));
+      let service = {};
+      service.name = formData.get('servico');
+      service.price = formData.get('preco');
+      service.enterprise = formData.get('empresa');
+      service.notes = formData.get('notas');
+      const userName = JSON.parse(localStorage.getItem('sistema:userInfo')).name;
+      const user = {id: Math.floor(Math.random() * 99999) , name: userName};
+      service.user = user;
+
+      let stored = localStorage.getItem("services"); 
+      if (stored) stored = JSON.parse(stored);
+      else stored = [];
+
+      stored.push(service);
+
+      localStorage.setItem("services", JSON.stringify(stored));
+      window.location.href = './index.html'
+    };
+  </script>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css"
+/>
+</head>
+
+
+<body>
+
+  <header>
+    <link rel="shortcut icon" type="imagem/x-icon" href="../images/logoicon.ico">
+    <div class="row">
+      <div class="col-12 header_area">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-8 col-lg-10 memu_area">
+            <nav class="navbar navbar-expand-md fixed-top menu-area">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+              </button>
+              <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <div class="dropdown">
+                  <button class="btn dropdown-toggle texto" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Tutoriais
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item texto_drop active" href="Adicione.html">Adicione</a>
+                  </div>
+                </div>
+
+                <a href="Perfil.html">
+                  <div class="perfil">
+                    <img src="images/perfil.png" class="perfil">
+                  </div>
+                </a>
+
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="container">
+      
+    <h1> Cadastrar Tutorial </h1>
+    <form onsubmit="">
+      <label for="empresa">Nome do Tutorial</label>
+      <input
+        required
+        name="empresa"
+        id="empresa"
+        placeholder="Digite o nome do tutorial"
+      />
+
+
+
+      <label for="notas">Descrição</label>
+      <textarea
+        name="notas"
+        id="notas"
+        placeholder="Fale sobre o tutorial"
+      ></textarea>
+
+      <input type="submit" value="Enviar" onclick="addService();" />
+    </form>
+  </main>
+
+  <footer>
+    <div class="row">
+      <div class="col-12 footer_area">
+        Copyright 2022 
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

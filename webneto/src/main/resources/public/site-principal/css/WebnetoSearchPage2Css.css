@@ -1,0 +1,252 @@
+.nav{
+    background-color: #5253FF;;
+-webkit-box-shadow: -11px 10px 16px 1px rgba(0, 0, 0, 0.1);
+-moz-box-shadow: -11px 10px 16px 1px rgba(0, 0, 0, 0.1);
+box-shadow: -11px 10px 16px 1px rgba(0, 0, 0, 0.3);
+transition: all 0.2s ease;
+box-sizing: border-box;
+}
+.nav-item{
+    
+font-family: 'Open Sans';
+font-style: semibold;
+font-weight: 600;
+font-size: 13px;
+line-height: 12px;
+/* or 100% */
+
+text-align: center;
+letter-spacing: 0.75px;
+text-transform: uppercase;
+color: #FFFFFF;
+  }
+  .form-control{
+    box-shadow: -11px 10px 16px 1px rgba(0, 0, 0, 0.1);
+transition: all 0.1s ease;
+  }
+.nav-item:hover {
+  color: #ffea2f;
+  }
+  
+
+  .navbar {
+    position: relative;
+}
+.navbar.brand {
+    position: absolute;
+    left: 50%;
+    margin-left: -131px !important; 
+    display: block;
+}
+
+body {
+	overflow-x: hidden;
+	color: #fff;
+}
+
+p {
+	font-size: 14px;
+}
+
+.container-fluid {
+	background-color: #fefeff;
+}
+
+.top-part {
+	background-color: #fefeff;
+}
+.bottom-part {
+	background-color: #3B14A8;
+}
+.center-content {
+	margin-top: 120px;
+	margin-bottom: 120px;
+  font-family: 'Open Sans';
+font-style: extrabold;
+font-weight: 600px;
+font-size: 13px;
+line-height: 12px;
+/* or 100% */
+
+text-align: center;
+letter-spacing: 0.75px;
+text-transform: uppercase;
+color: #3B14A8;
+}
+
+.btn-pink {
+	border-radius: 2;
+	background-color: #2EB394;
+	color: #fff !important;
+  font-family: 'Open Sans';
+  font-style: bold;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 12px;
+  /* or 100% */
+  
+  text-align: center;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+ 	letter-spacing: 2px;
+	padding: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.btn-pink:hover {
+	background-color: #F50057;
+}
+
+.line {
+	border-top: 1px solid #7B1FA2;
+	width: 90% !important;
+}
+
+.fa-mobile {
+	font-size: 20px;
+  color: #3B14A8;
+}
+
+#contact {
+	font-size: 15px;
+}
+
+.grey-text {
+	color: #fefeff;
+}
+
+#maindiv{
+  margin-top: 60px;
+  width:35%;
+  border-radius: 8px;
+  display: flex;
+  height:40px;
+  border:1px solid lightgrey;
+}
+
+#inputspan{
+  background: transparent;
+  width: 100%; 
+}
+  
+span{
+    vertical-align: top;
+  }
+   span:last-child{
+    width:10%;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+  }
+  input{
+    height:100%;
+    width:100%;
+    border: none;
+    padding:0px;
+  }
+  section{
+    display: flex;
+    margin-top: 2%;
+    width:23%;
+    justify-content: space-around;
+    margin-bottom: 2%;
+  }
+
+  section button{
+      
+    background-color: #2EB394;
+    border-radius: 8px;
+    background-color: #2EB394;
+    color: #fff !important;
+  font-family: 'Open Sans';
+  font-style: bold;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 12px;
+  border-color: #28a185;
+  
+  
+  text-align: center;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+     letter-spacing: 2px;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    
+  }
+  
+  section button:hover {
+    background-color: #F50057;
+  }
+  
+  .chatbox {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+/* CONTENT IS CLOSE */
+.chatbox__support {
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    width: 300px;
+    height: 350px;
+    z-index: -123456;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+/* CONTENT ISOPEN */
+.chatbox--active {
+    transform: translateY(-40px);
+    z-index: 123456;
+    opacity: 1;
+    
+}
+
+/* BUTTON */
+.chatbox__button {
+    text-align: right;
+}
+
+
+/* HEADER */
+.chatbox__header {
+    position: sticky;
+    top: 0;
+    background: orange;
+}
+
+/* MESSAGES */
+.chatbox__messages {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    flex-direction: column-reverse;
+}
+
+.messages__item {
+    background: orange;
+    max-width: 60.6%;
+    width: fit-content;
+}
+
+.messages__item--operator {
+    margin-left: auto;
+}
+
+.messages__item--visitor {
+    margin-right: auto;
+}
+
+
+.chatbox__footer {
+    position: sticky;
+    bottom: 0;
+}
+
+  
